@@ -1,6 +1,5 @@
-import datetime
 import socket
-from time import timezone
+from datetime import datetime, timezone
 
 from fastapi import FastAPI
 
@@ -18,6 +17,5 @@ def root() -> dict[str,str]:
 @app.get("/api/v1/health")
 def health() -> dict[str,str]:
     return {"status": "ok"}
-
 
 
